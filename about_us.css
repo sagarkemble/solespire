@@ -67,16 +67,19 @@ nav ul li a{
 	display: flex;
 	padding: 8rem 0;
 	width: 100%;
+    height: 550px;
 	justify-content: center;
-	background-color: rgb(8, 19, 24);
+	
+    z-index: 1;
 }
 .about-img {
-    width: 800px;
+    width: 900px;
     height: 450px;
     margin: 25px 3rem 0;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    z-index: 2;
 }
 .about-img img {
     width: 100%;
@@ -85,6 +88,7 @@ nav ul li a{
     position: absolute;
     top: 0;
     left: 0;
+
 }
 
 
@@ -96,6 +100,7 @@ nav ul li a{
 	border-left: 3px solid #00b894;
 	padding-left: 2rem;
 	margin: 0 3rem;
+    z-index: 2;
 }
 .about-intro p{
 	margin-top: 1.5rem;
@@ -114,6 +119,8 @@ nav ul li a{
     width: 30px; /* Adjust the size of the icons as needed */
     margin: 0 10px; /* Adjust the spacing between the icons as needed */
 }
+
+
 
 
 @media only screen and (max-width: 900px) {
@@ -140,4 +147,54 @@ nav ul li a{
 	}
 
 
+}
+/* Original CSS styles here */
+
+/* Media query for screens up to 900px */
+@media only screen and (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .socialmedia {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .about-sec {
+        padding: 4rem 0;
+    }
+
+    .about-img {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .about-intro {
+        width: 90%;
+        margin: 0 auto;
+        border-left: none;
+        padding: 1rem 0;
+    }
+
+    .about-intro h3, .about-intro p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .socialmedia img {
+        margin: 0 5px;
+    }
 }
