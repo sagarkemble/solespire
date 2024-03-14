@@ -1,165 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 * {
-    margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(8, 14, 17);
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  }
-  
-  body {
-    background-color: rgb(8, 14, 17);
-  }
-  
-  /*===================== nav ====================*/
-  
-  nav{
-    
-    font-weight: bold;
-    z-index: 100;
-    display: inline-flex;
-    width:90%;
-    padding: 30px 1%;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: 10px;
-    left: 0px;
+}
+
+/* Navigation */
+nav{
+  z-index: 100;
+  display: inline-flex;
+  width:90%;
+  padding: 30px 1%;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+  left: 0px;
 }
 
 nav ul li{
-    position: relative;
-    right: 520px;
-    display: inline-block;
-    margin-left: 40px;
-    z-index: 100;
-    list-style: none;
+  position: relative;
+  right: 520px;
+  display: inline-block;
+  margin-left: 40px;
+  z-index: 100;
+  list-style: none;
 }
 
 nav ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+  content: '';
+  height: 3px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
 }
 
 nav ul li:hover::after{
-    width: 100%;
+  width: 100%;
 }
 
 nav ul li a{
-    color: #fff;
-    font-weight: 500;
-    display: block;
-    font-size: 17px;
-    text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  font-size: 17px;
+  text-decoration: none;
 }
 
-.logo{
-    width: 60px;
-    margin-left: 40px;
+.logo {
+  margin-left: 30px;
+  width: 60px;
+  height: 60px;
 }
 
+.image-box {
+  position: absolute;
+  right: 3px;
+  display: flex;
+  background-color: rgb(44, 146, 255);
+  width: 48%;
+  height: 100%;
+  z-index: -2;
+  clip-path: polygon(8% 0, 100% 0%, 100% 100%, 57% 100%);
+}
+
+
+.skewbox {
+  display: flex; 
   
-  /*====================== content ===============*/
-  
-  .image-box {
-    position: absolute;
-    right: 3px;
-    display: flex;
-    background-color: rgb(44, 146, 255);
-    width: calc(50% - 50px); 
-    height: 100vh;
-    z-index: 4;
-    clip-path: polygon(8% 0, 100% 0%, 100% 100%, 57% 100%);
-  }
-  
+}
+
+.main-content {
+  flex: 1; 
+  top: 35px;
+  position: absolute;
+  height: 900px;
+  padding: 20px; 
+  text-align: left; 
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.title{
+  font-size: 76px !important;
+}
+
+
+
+
+.price {
+  font-size: 2.1em;
+  position: relative; 
+  top: 18px;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 76px; 
+  word-spacing: 1px;
+  font-weight: 600;
+}
+
+.stars {
+  font-size: 36px; 
+  color: yellow;
+}
+
+.description {
+  font-size: 20px;
+  width: 222px;
+  text-align: left;
+}
+
+.back {
+  position: absolute;
+  top: 31px;
+  font-family: 'Swis721 Cn BT';
+  left: 50px;
+  letter-spacing: 1px;
+  font-size: 720px; 
+  z-index: -1;
+  color: rgb(41, 49, 69);
+}
+
+
+
+
+.buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  /* Adjustments for tablets and larger screens */
   .main-content {
-    position: absolute;
-    top: 190px;
-    left: 190px;
-    z-index: 100;
+    padding: 150px 50px;
   }
-  
-  .price {
-    font-size: 2.1em;
-  }
-  
+
   .title {
-    text-transform: capitalize;
-    font-size: 76px; 
-    word-spacing: 1px;
-    font-weight: 600;
+    font-size: 48px;
   }
-  
+
   .stars {
-    font-size: 36px; 
+    font-size: 36px;
     color: yellow;
   }
-  
+
   .description {
     font-size: 20px;
-    width: 222px;
-    text-align: left;
   }
-  
-  .back {
-    position: absolute;
-    top: 31px;
-    font-family: 'Swis721 Cn BT';
-    left: 50px;
-    letter-spacing: 1px;
-    font-size: 720px; 
-    z-index: 5;
-    color: rgb(41, 49, 69);
+
+  .price {
+    font-size: 36px;
   }
-  
-  span {
-    position: absolute;
-    top: -11px;
-    right: -570px;
-    letter-spacing: 1px;
-    font-size: 720px;
-    z-index: 5;
-    opacity: 0.3;
-    color: rgb(41, 49, 69);
-  }
-  
-  .button {
-    background-color: rgb(115, 177, 255);
-    text-decoration: none;
-    padding: 5px 12px;
-    border-radius: 20px;
-    transition: 0.5s ease-in-out;
-  }
-  
-  .button:hover {
-    opacity: 0.4;
-  }
-  
+
   .shoe {
     position: absolute;
-    right: 120px;
-    top: 130px;
-    height: 680px; 
-    z-index: 100;
+    right: 100px;
+    top: 100px;
+    max-width: none;
+    width: 50%;
+    height: auto;
   }
-  .buy-button {
-    padding: 10px 20px; 
-    background-color: #007bff; 
-    color: #fff;
-    border-radius: 25px; 
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s; 
-}
 
-
- .buy-button:hover {
-  color: #000;
-  background-color: #fff;
+  
 }
