@@ -67,19 +67,15 @@ nav ul li a{
 	display: flex;
 	padding: 8rem 0;
 	width: 100%;
-    height: 550px;
 	justify-content: center;
-	
-    z-index: 1;
 }
 .about-img {
-    width: 900px;
+    width: 800px;
     height: 450px;
     margin: 25px 3rem 0;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    z-index: 2;
 }
 .about-img img {
     width: 100%;
@@ -88,7 +84,6 @@ nav ul li a{
     position: absolute;
     top: 0;
     left: 0;
-
 }
 
 
@@ -100,7 +95,6 @@ nav ul li a{
 	border-left: 3px solid #00b894;
 	padding-left: 2rem;
 	margin: 0 3rem;
-    z-index: 2;
 }
 .about-intro p{
 	margin-top: 1.5rem;
@@ -119,8 +113,6 @@ nav ul li a{
     width: 30px; /* Adjust the size of the icons as needed */
     margin: 0 10px; /* Adjust the spacing between the icons as needed */
 }
-
-
 
 
 @media only screen and (max-width: 900px) {
