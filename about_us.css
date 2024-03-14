@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+*{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(8, 14, 17);
+}
+nav{
+    
+    font-weight: bold;
+    z-index: 100;
+    display: inline-flex;
+    width:90%;
+    padding: 30px 1%;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+nav ul li{
+    position: relative;
+    right: 540px;
+    display: inline-block;
+    margin-left: 40px;
+    z-index: 100;
+    list-style: none;
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+nav ul li a{
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.logo{
+    width: 60px;
+    margin-left: 40px;
+}
+
+.about-sec{
+	display: flex;
+	padding: 8rem 0;
+	width: 100%;
+	justify-content: center;
+	background-color: rgb(8, 19, 24);
+}
+.about-img {
+    width: 800px;
+    height: 450px;
+    margin: 25px 3rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.about-intro{
+	font-size: 30px;
+	color: #fff;
+	width: 400px;
+	height: 500px;
+	border-left: 3px solid #00b894;
+	padding-left: 2rem;
+	margin: 0 3rem;
+}
+.about-intro p{
+	margin-top: 1.5rem;
+	font-size: 20px;
+	opacity: .7;
+}
+.socialmedia {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%; /* Position the icons horizontally centered */
+    transform: translateX(-50%); /* Center the icons horizontally */
+    display: flex;
+}
+
+.socialmedia img {
+    width: 30px; /* Adjust the size of the icons as needed */
+    margin: 0 10px; /* Adjust the spacing between the icons as needed */
+}
+
+
+@media only screen and (max-width: 900px) {
+	.about-sec{
+		flex-direction: column;
+		align-items: center;
+	}
+	.about-img{
+		width: 80%;
+	}
+	.about-intro{
+		width: 100%;
+		height: 100%;
+		border-top: 3px solid #00b894;
+		border-left: none;
+		padding: 1rem;
+		margin-top: 2rem;
+	}
+	.about-intro h3,p{
+		width: 80%;
+	}
+	.about-intro p{
+		font-size: 12px;
+	}
+
+
+}
